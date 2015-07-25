@@ -38,7 +38,7 @@ class MyAPIClient(object):
 
     def _handle_connection_error(self, e):
         """Handle a persistent connection error or timeout"""
-        pass
+        raise requests.exceptions.ConnectionError
 
 
     def _handle_http_error(self, e):
